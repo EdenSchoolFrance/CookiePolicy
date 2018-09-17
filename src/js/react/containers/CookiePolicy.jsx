@@ -22,7 +22,7 @@ class CookiePolicy extends Component {
 	}
 
 	init ({ cookiePolicy, cookies }) {
-		if (!!cookiePolicy !== !!cookies.has('CookiePolicy')) {
+		if (!!cookiePolicy !== !!cookies.get('CookiePolicy')) {
 			this.acceptCookies();
 		}
 	}
