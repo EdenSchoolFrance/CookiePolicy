@@ -21,17 +21,14 @@
     "babel-preset-env": "^1.7.0",
     "classnames": "^2.2.6",
     "prop-types": "^15.6.2",
-    "react-cookie": "^3.0.4"
-  },
-  "devDependencies": {
-    "@babel/preset-react": "^7.0.0",
-    "babel-plugin-import": "^1.9.1",
+    "react-cookie": "^3.0.4",
     "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-plugin-transform-es2015-classes": "^6.24.1",
     "babel-plugin-transform-es2015-modules-commonjs": "^6.26.2",
     "babel-plugin-transform-imports": "^1.5.1",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
-    "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1"
+  },
+  "devDependencies": {
   }
 }
