@@ -4,7 +4,7 @@ import { withCookies, Cookies } from 'react-cookie';
 import PropTypes from 'prop-types';
 
 import Cookie from '../components/CookiePolicy';
-import { cookiePolicyAccept } from '../../actions/CookiePolicy';
+import { cookiePolicyAccept } from '../../redux/actions/CookiePolicy';
 
 
 class CookiePolicy extends Component {
