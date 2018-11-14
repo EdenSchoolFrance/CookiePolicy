@@ -10,7 +10,8 @@ import { cookiePolicyAccept } from '../../redux/actions/cookiePolicy';
 class CookiePolicy extends Component {
 	static propTypes = {
 		cookies: 	  PropTypes.instanceOf(Cookies).isRequired,
-		cookiePolicy: PropTypes.boolean
+		cookiePolicy: PropTypes.boolean,
+		maxAge:       PropTypes.number
 	};
 
 	componentWillMount() {
@@ -38,9 +39,9 @@ class CookiePolicy extends Component {
 	}
 
 	acceptCookies = () => {
-		const { cookies, acceptCookies } = this.props;
+		const { cookies, acceptCookies, maxAge = 315360000 } = this.props;
 
-		cookies.set('CookiePolicy', '1', { path: '/' });
+		cookies.set('CookiePolicy', '1', { path: '/', maxAge });
 
 		acceptCookies();
 	}
