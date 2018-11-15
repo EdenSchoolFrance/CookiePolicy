@@ -4,8 +4,8 @@ import cx from "classnames";
 
 class CookiePolicy extends Component{
 	static propTypes = {
-		accepted: PropTypes.boolean,
-		accept:   PropTypes.function
+		accepted: PropTypes.bool,
+		accept:   PropTypes.func
 	};
 
 	static defaultProps = {
@@ -43,7 +43,7 @@ class CookiePolicy extends Component{
 	}
 
   	render(){
-		const { className, children, ...props } = this.props;
+		const { className, children, cookiePolicy, allCookies, accepted, accept, ...props } = this.props;
     	const { closed } = this.state;
 
     	if (closed) {
@@ -52,10 +52,10 @@ class CookiePolicy extends Component{
 
     	return(
       		<div {...props} className={cx("cookie", className)}>
-        		<p>{ children }</p>
-        		<div>
-          			<button onClick={() => this.close(true)}>Continuer</button>
-        		</div>
+           		<p>{ children }</p>
+           		<div>
+             			<button onClick={() => this.close(true)}>Continuer</button>
+           		</div>
       		</div>
     	);
   	}
